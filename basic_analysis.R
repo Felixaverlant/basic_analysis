@@ -83,7 +83,6 @@ dataset_global <- function(device=''){
   
   s <- c("total", "Shopping", "Checkout", "Conversions")
   stays <- data.frame(status="stays", percent=c(100, before_shopping_percent, entry_CO_percent, transactions_percent))
-  stays2 <- c(status="stays", percent=c(100, before_shopping_percent, entry_CO_percent, transactions_percent))
   stays['steps'] <-  s
 
   lost <- data.frame(status="lost",percent=round(c(100,BR, 100-entry_CO / before_shopping *100, 100 - transactions / entry_CO *100), 2))
